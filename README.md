@@ -42,7 +42,7 @@ This course supports the following CIST Program Learning Outcomes and correspond
 | Labs 13 @ 2 points         | 26% |
 | Homework 8 @ 3 points      | 24% |
 | Projects 2 @ 10 points     | 20% |
-| Misterm 1 @ 10 points      | 10% |
+| Midterm 1 @ 10 points      | 10% |
 | Final Exam @ 20 points     | 20% |
 | Total                      | 100% |
 
