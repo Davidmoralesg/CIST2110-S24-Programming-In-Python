@@ -40,6 +40,58 @@ BALANCE = 1000.00  # Random Starting Balance
 # Functions
 
 
+# user_authentication() - Function to authenticate the user
+def authenticate_user() -> bool:
+    """
+    This function authenticates the user by asking for their
+    username and pin
+    The function will only prompt 3 times for a username and pin
+
+    Keyword arguments:
+
+    Return: True if the username and pin are correct, otherwise return False
+    """
+    # Create a for loop that counts from 0 - 2 (3 times total)
+    # Ask user for their username
+    # Ask user for their pin
+    # Check if the the username and pin are correct
+    # Return True if username and pin are correct, otherwise return False
+    for i in range(3):  # 0, 1, 2
+        input_username = input("Enter your username(Case Sensitive): ")
+        # remove any spaces from the input_username
+        input_username = input_username.strip()
+        # If the user enters, nothing ask them to enter a username using a while loop
+        while input_username == "":
+            print("You must enter a username.")
+            input_username = input("Enter your username(Case Sensitive): ")
+            input_username = input_username.strip()
+
+        input_pin = input("Enter your pin: ")
+        # Error Handling:
+        # remove any spaces from the input
+        input_pin = input_pin.strip()
+
+        # If the user enters, nothing ask them to enter a pin using a while loop
+        while input_pin == "":
+            print("You must enter a pin.")
+            input_pin = input("Enter your pin: ")
+            input_pin = input_pin.strip()
+
+        # Validate the username and pin
+        if input_username == USERNAME and input_pin == PIN:
+            return True
+        else:
+            print(
+                "Invalid username or pin. Please try again. You have "
+                + str(2 - i)
+                + " attempts remaining."
+            )  # 2-i = 2-0 = 2, 2-1 = 1, 2-2 = 0
+        if i == 2:
+            print("You have exceeded the maximum number of attempts. Goodbye!")
+            sys.exit()
+    return False  # by default return False
+
+
 # check_balance() - Function to check the user's balance
 # Parameters: None
 # Return Value: Float - The user's balance
@@ -177,15 +229,13 @@ def main():
     Whatever code is in this function will run when the program is executed
     """
     print("Welcome to the Bank Account Management System")
-    # print_balance()
-    # deposit(500)
-    # print_balance()
-    # deposit()
-    # print_balance()
-    # withdraw()
-    # print_balance()
-    choice = main_menu()
-    menu_logic(choice)
+    if authenticate_user() is True:
+        print("Authentication Successful!")
+
+        # Keep prompting the user to enter a choice until they choose to exit
+        while True:
+            choice = main_menu()
+            menu_logic(choice)
 
 
 if __name__ == "__main__":
