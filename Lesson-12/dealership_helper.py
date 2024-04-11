@@ -73,3 +73,48 @@ class Car:
             self.odometer_reading = milage  # update the odometer reading
         else:
             print("You can't roll back an odometer!")
+
+    # create a method that increments the odometer reading
+    def increment_odometer(self, miles: int):
+        """increment the odometer reading by the miles
+
+        Args:
+            miles (int): the miles to increment the odometer reading
+        """
+        if miles > 0:
+            self.odometer_reading += miles  # increment the odometer reading
+        else:
+            print("You can't roll back an odometer!")
+
+
+## Lets make a ElectricCar Class that inherits from the Car Class
+class ElectricCar(Car):
+    """This is an Electric Car Class. An Electric Car has a make, model, year, and price. the price is private.
+    The odometer reading is public.
+
+    Returns:
+        [type] -- [description]
+        ElectricCar: An Electric Car Object
+    """
+
+    # create a ElectricCar constructor (build the blueprint)
+    # notice the double underscore __init__
+    # this is a dunder method
+    # Class Constructor
+    def __init__(self, make, model, year, price, battery_cylce_count):
+        """
+        Initialize attributes of the parent class.
+        Then initialize attributes specific to an electric car.
+        """
+        super().__init__(
+            make, model, year, price
+        )  # This is calling the constructor of the parent class
+        # super() is a function that refrences the parent class
+        self.battery_cylce_count = battery_cylce_count
+
+    def __str__(self):
+        return f"{self.make} {self.model} {self.year} {self.odometer_reading} {self.battery_cylce_count}"
+
+    def describe_battery(self):
+        """Print a statement describing the battery size."""
+        return f"This {self.make} {self.model} has a cycle count of {self.battery_cylce_count}"

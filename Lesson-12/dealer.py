@@ -1,5 +1,5 @@
 # import dealership healper to build car objects
-from dealership_helper import Car
+from dealership_helper import Car, ElectricCar
 
 
 # from the Car class, we are inheriting all the attributes and methods
@@ -31,3 +31,18 @@ print(car2.price)
 print(car2.odometer_reading)
 car2.update_odometer(20000)
 print(car2.odometer_reading)
+
+
+car1.increment_odometer(500)
+
+
+print(car1.odometer_reading)
+
+
+car_electric = ElectricCar("Tesla", "Model S", 2021, 80000, 1000)
+
+
+print(car_electric)
+
+
+print(car_electric.describe_battery())
