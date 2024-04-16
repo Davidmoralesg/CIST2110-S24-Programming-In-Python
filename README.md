@@ -32,7 +32,7 @@ This course supports the following CIST Program Learning Outcomes and correspond
 | 11     | Mar 26 - NO CLASS   | Mar 28               | Chapter 11 - Working with Dates and Times | Lab 10, HW 7 |
 | 12     | Apr 2               | Apr 4                | Chapter 12 - Working with Directories | Lab 11, Project 2 |
 | 13     | Apr 9               | Apr 11               | Chapter 14 - Classes and Objects | Lab 12, HW8 |
-| 14     | Apr 16              | Apr 18               | Chapter 16 - Designing Classes following OOP Principles  | Lab 13, HW 9 |
+| 14     | Apr 16              | Apr 18               | Chapter 16 - Designing Classes following OOP Principles  | Lab 13, Final Exam Project Review |
 | 15     | Apr 23              | Apr 25               | MISC, Final Exam Review | |
 
 ## Grading
